@@ -33,6 +33,8 @@ export function NewsCard({ article }: NewsCardProps) {
           <Image 
               src={article.imageUrl}
               alt={article.title}
+              width={200}
+              height={200}
               className="h-full w-full object-cover"
               onError={handleImageError}
           />
@@ -41,6 +43,8 @@ export function NewsCard({ article }: NewsCardProps) {
             <Image
                 src="/placeholder.svg"
                 alt="Placeholder"
+                width={200}
+                height={200}
                 className="h-full w-full object-cover"
             />
           </div>
