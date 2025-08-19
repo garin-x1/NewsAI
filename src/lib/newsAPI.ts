@@ -17,6 +17,7 @@ const wordlNewsClient = axios.create({
   baseURL: "https://api.worldnewsapi.com",
 });
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 const fetchGNewsAPI = async (query: string = "artificial intelligence"): Promise<NewsArticle[]> => {
   try {
     const response = await gnewsClient.get("/search", {

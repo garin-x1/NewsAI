@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { NewsArticle } from '@/types/news';
 import { ExternalLink, Calendar } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface NewsCardProps {
@@ -29,18 +30,18 @@ export function NewsCard({ article }: NewsCardProps) {
     <Card className="h-full pt-0 pb-6 top-0 hover:shadow-lg transition-shadow">
       <div className="aspect-video w-full overflow-hidden rounded-t-lg">
         {article.imageUrl && !imageError ? (
-          <img
-            src={article.imageUrl}
-            alt={article.title}
-            className="h-full w-full object-cover"
-            onError={handleImageError}
+          <Image 
+              src={article.imageUrl}
+              alt={article.title}
+              className="h-full w-full object-cover"
+              onError={handleImageError}
           />
         ) : (
           <div className="h-full w-full bg-muted flex items-center justify-center">
-            <img 
-              src="/placeholder.svg" 
-              alt="Placeholder" 
-              className="h-full w-full object-cover"
+            <Image
+                src="/placeholder.svg"
+                alt="Placeholder"
+                className="h-full w-full object-cover"
             />
           </div>
         )}

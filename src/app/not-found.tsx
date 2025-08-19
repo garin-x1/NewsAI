@@ -28,7 +28,8 @@ export default function NotFound() {
           <FileQuestion className="h-24 w-24 text-muted-foreground mx-auto mb-6" />
           <h2 className="text-3xl font-semibold mb-4">Page Not Found</h2>
           <p className="text-muted-foreground text-lg max-w-md mx-auto mb-8">
-            The page you are looking for doesn't exist or has been moved.
+            The page you are looking for doesn&apos;t exist or has been moved.
+
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg">
