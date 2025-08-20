@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="flex-1 bg-background">
 
       {/* Header */}
       <header className="border-b bg-transparent backdrop-blur-sm sticky top-0 z-50">

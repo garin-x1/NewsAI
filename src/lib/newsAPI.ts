@@ -181,6 +181,7 @@ export const fetchAllNews = async (query?: string): Promise<NewsArticle[]> => {
 
   return uniqueArticles.map((article, index) => ({
     ...article,
-    id: `${article.id}-${index}`
+    id: `${article.id}-${index}`,
+    source: (article.source.length > 20) ? `${article.source.slice(0, 20)}...` : article.source,
   }));
 };
